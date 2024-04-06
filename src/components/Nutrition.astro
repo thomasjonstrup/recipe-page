@@ -1,0 +1,45 @@
+---
+type Nutrition = {
+	title: string;
+	nutrition: string;
+};
+
+const nutritions: Nutrition[] = [
+	{
+		title: 'Calories',
+		nutrition: '277kcal',
+	},
+	{
+		title: 'Carbs',
+		nutrition: '0g',
+	},
+	{
+		title: 'Protein',
+		nutrition: '20g',
+	},
+	{
+		title: 'Fat',
+		nutrition: '22g',
+	},
+];
+---
+
+<div class='mx-8 p-8'>
+	<h2 class='font-young-serif text-xl font-bold text-nutmeg'>Nutrition</h2>
+	<p>
+		The table below shows nutritional values per serving without the
+		additional fillings.
+	</p>
+	<ul class='list-decimal marker:text-nutmeg'>
+		{
+			nutritions.map(({nutrition, title}) => {
+				return (
+					<li class='mt-2 list-item pl-4'>
+						{nutrition}
+						<strong>{title}:</strong>
+					</li>
+				);
+			})
+		}
+	</ul>
+</div>

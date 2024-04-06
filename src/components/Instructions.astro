@@ -1,0 +1,54 @@
+---
+type Instructions = {
+	title: string;
+	instruction: string;
+};
+
+const instructions: Instructions[] = [
+	{
+		title: 'Beat the eggs',
+		instruction:
+			'In a bowl, beat the eggs with a pinch of salt and pepper until they are well mixed. You can add a tablespoon of water or milk for a fluffier texture.',
+	},
+	{
+		title: 'Heat the pan',
+		instruction:
+			'Place a non-stick frying pan over medium heat and add butter or oil.',
+	},
+	{
+		title: 'Cook the omelette',
+		instruction:
+			'Once the butter is melted and bubbling, pour in the eggs. Tilt the pan to ensure the eggs evenly coat the surface.',
+	},
+	{
+		title: 'Add fillings (optional)',
+		instruction:
+			'When the eggs begin to set at the edges but are still slightly runny in the middle, sprinkle your chosen fillings over one half of the omelette.',
+	},
+	{
+		title: 'Fold and serve',
+		instruction:
+			'As the omelette continues to cook, carefully lift one edge and fold it over the fillings. Let it cook for another minute, then slide it onto a plate.',
+	},
+	{
+		title: 'Enjoy',
+		instruction: 'Serve hot, with additional salt and pepper if needed.',
+	},
+];
+---
+
+<div class='mx-8 p-8'>
+	<h2 class='font-young-serif text-xl font-bold text-nutmeg'>Ingredients</h2>
+	<ul class='list-decimal marker:text-nutmeg'>
+		{
+			instructions.map(({instruction, title}) => {
+				return (
+					<li class='mt-2 list-item pl-4'>
+						<strong>{title}:</strong>
+						{instruction}
+					</li>
+				);
+			})
+		}
+	</ul>
+</div>

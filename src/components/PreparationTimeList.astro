@@ -1,0 +1,40 @@
+---
+type PreparationTime = {
+	label: string;
+	timeInMinutes: number;
+};
+
+const times: PreparationTime[] = [
+	{
+		label: 'Preparation',
+		timeInMinutes: 5,
+	},
+	{
+		label: 'Cooking',
+		timeInMinutes: 5,
+	},
+];
+
+const totalTime = times.reduce((accumulator, currentTimeValue) => {
+	return accumulator + currentTimeValue.timeInMinutes;
+}, 0);
+---
+
+<div class='mx-8 rounded-md bg-rose-white p-8'>
+	<p class='text-xl font-bold text-dark-raspberry'>Preparation time</p>
+	<ul class='list-disc marker:text-dark-raspberry'>
+		<li class='mt-2 list-item pl-4'>
+			<strong>Total:</strong> Approximately {totalTime} minutes
+		</li>
+		{
+			times.map((preparationTime) => {
+				return (
+					<li class='mt-2 list-item pl-4'>
+						<strong>{preparationTime.label}:</strong>{' '}
+						{preparationTime.timeInMinutes} minutes
+					</li>
+				);
+			})
+		}
+	</ul>
+</div>

@@ -1,0 +1,78 @@
+---
+import {Image} from 'astro:assets';
+import Layout from '../layouts/Layout.astro';
+import PreparationTimeList from '../components/PreparationTimeList.astro';
+import Ingredients from '../components/Ingredients.astro';
+import Instructions from '../components/Instructions.astro';
+import ImageOmelette from '../images/image-omelette.jpeg';
+import Nutrition from '../components/Nutrition.astro';
+---
+
+<Layout title='Frontend Mentor | Recipe page'>
+	<main
+		class='mx-auto mb-8 max-w-[740px] bg-white md:mt-[40px] md:rounded-xl md:p-8 lg:mt-[120px] lg:rounded-2xl lg:p-[40px]'
+	>
+		<div class='image-container p-0'>
+			<Image
+				class='md:rounded-lg'
+				src={ImageOmelette}
+				alt='Image of omelette'
+			/>
+		</div>
+		<div class='p-[30px]'>
+			<h1 class='font-young-serif text-3xl'>Simple Omelette Recipe</h1>
+			<p class='mt-[12px]'>
+				An easy and quick dish, perfect for any meal. This classic
+				omelette combines beaten eggs cooked to perfection, optionally
+				filled with your choice of cheese, vegetables, or meats.
+			</p>
+		</div>
+		<PreparationTimeList />
+		<hr class='mt-8' />
+		<Ingredients />
+		<hr class='mt-8' />
+		<Instructions />
+		<hr class='mt-8' />
+		<Nutrition />
+	</main>
+	<footer>
+		<div class='p-2 text-center text-sm'>
+			Challenge by <a
+				class='text-dark-raspberry hover:underline'
+				href='https://www.frontendmentor.io?ref=challenge'
+				target='_blank'>Frontend Mentor</a
+			>. Coded by <a href='https://github.com/thomasjonstrup'
+				>Thomas Jonstrup</a
+			>.
+		</div>
+	</footer>
+</Layout>
+
+<style is:global>
+	:root {
+		--primary: hsl(30, 54%, 90%);
+		--secondary: hsl(30, 10%, 34%);
+	}
+
+	/* Firefox */
+	* {
+		scrollbar-width: thin;
+		scrollbar-color: var(--secondary) var(--primary);
+	}
+
+	/* Chrome, Edge, and Safari */
+	*::-webkit-scrollbar {
+		width: 15px;
+	}
+
+	*::-webkit-scrollbar-track {
+		background: var(--primary);
+		border-radius: 5px;
+	}
+
+	*::-webkit-scrollbar-thumb {
+		background-color: var(--secondary);
+		border-radius: 14px;
+		border: 3px solid var(--primary);
+	}
+</style>
