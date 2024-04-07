@@ -1,18 +1,19 @@
 ---
 const ingredientsList: string[] = [
-	'2-3 large eggs Salt',
-	'to taste Pepper',
-	'to taste 1 tablespoon of butter or oil',
+	'2-3 large eggs',
+	'Salt to taste',
+	'Pepperto taste',
+	'1 tablespoon of butter or oil',
 	'Optional fillings: cheese, diced vegetables, cooked meats, herbs',
 ];
 ---
 
-<div class='mx-8 p-8'>
-	<h2 class='font-young-serif text-xl font-bold text-nutmeg'>Ingredients</h2>
-	<ul class='list-disc marker:text-nutmeg'>
+<div class='p-8'>
+	<h2 class='font-young-serif text-xl text-nutmeg'>Ingredients</h2>
+	<ul class='list-inside list-disc marker:text-nutmeg'>
 		{
 			ingredientsList.map((ingredient) => {
-				return <li class='mt-2 list-item pl-4 pb-2'>{ingredient}</li>;
+				return <li class='mt-2 list-item pb-2 pl-4'>{ingredient}</li>;
 			})
 		}
 	</ul>
