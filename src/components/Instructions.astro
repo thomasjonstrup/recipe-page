@@ -38,12 +38,14 @@ const instructions: Instructions[] = [
 ---
 
 <div class='mx-8 p-8'>
-	<h2 class='font-young-serif text-xl font-bold text-nutmeg'>Ingredients</h2>
+	<h2 class='pb-2 font-young-serif text-xl font-bold text-nutmeg'>
+		Ingredients
+	</h2>
 	<ul class='list-decimal marker:text-nutmeg'>
 		{
 			instructions.map(({instruction, title}) => {
 				return (
-					<li class='mt-2 list-item pl-4'>
+					<li class='mt-2 list-item pb-2 pl-4'>
 						<strong>{title}:</strong>
 						{instruction}
 					</li>

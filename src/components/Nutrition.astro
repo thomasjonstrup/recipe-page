@@ -25,21 +25,29 @@ const nutritions: Nutrition[] = [
 ---
 
 <div class='mx-8 p-8'>
-	<h2 class='font-young-serif text-xl font-bold text-nutmeg'>Nutrition</h2>
-	<p>
+	<h2 class='pb-2 font-young-serif text-xl font-bold text-nutmeg'>
+		Nutrition
+	</h2>
+	<p class='pb-2'>
 		The table below shows nutritional values per serving without the
 		additional fillings.
 	</p>
-	<ul class='list-decimal marker:text-nutmeg'>
+	<div class='flex flex-col gap-2'>
 		{
 			nutritions.map(({nutrition, title}) => {
 				return (
-					<li class='mt-2 list-item pl-4'>
-						{nutrition}
-						<strong>{title}:</strong>
-					</li>
+					<div class='flex justify-between border-b-[1px] px-4 py-2'>
+						<div class='flex-1'>
+							<p class='pl-2'>{title}</p>
+						</div>
+						<div class='flex-1'>
+							<strong class='pl-2 text-nutmeg'>
+								{nutrition}
+							</strong>
+						</div>
+					</div>
 				);
 			})
 		}
-	</ul>
+	</div>
 </div>
