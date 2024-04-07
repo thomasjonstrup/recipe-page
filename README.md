@@ -1,5 +1,7 @@
 # Frontend Mentor - Recipe page solution
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/13e42d1b-d097-48b1-b2e9-4e5533c3c3de/deploy-status)](https://app.netlify.com/sites/recipe-page-tj/deploys)
+
 This is a solution to the
 [Recipe page challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/recipe-page-KiTsR8QQKm).
 Frontend Mentor challenges help you improve your coding skills by building
