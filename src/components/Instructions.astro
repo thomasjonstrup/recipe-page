@@ -37,15 +37,15 @@ const instructions: Instructions[] = [
 ];
 ---
 
-<div class='p-8'>
-	<h2 class='pb-2 font-young-serif text-xl text-nutmeg'>Instructions</h2>
+<div class='px-8 py-8 md:px-0'>
+	<h2 class='pb-2 font-young-serif text-2xl text-nutmeg'>Instructions</h2>
 	<ul
 		class='list-inside list-decimal marker:ml-2 marker:font-bold marker:text-nutmeg'
 	>
 		{
 			instructions.map(({instruction, title}) => {
 				return (
-					<li class='mt-2 list-item pb-2 pl-4'>
+					<li class='mt-2 list-item pb-2 pl-1'>
 						<strong class='pl-2'>{title}:</strong>
 						{instruction}
 					</li>
